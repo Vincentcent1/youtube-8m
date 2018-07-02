@@ -1,0 +1,14 @@
+Youtube-8M Video Understanding Challenge
+
+Goal: Learning video representation under budget constraints
+
+Evaluation: Global Average Precision at k = 20
+
+	For each video, submit a list of predicted labels and their corresponding confidence scores. The evaluation takes the predicted labels that have the highest k confidence scores for each video, then treats each prediction and the confidence score as an individual data point in a long list of global predictions, to compute the AP across all of the predictions and all the videos.
+
+	If a submission has N predictions (label/confidence pairs) sorted by its confidence score, then the GAP is GAP = \sum_{n=1}^{N}p(i)\Delta r(i)
+
+For each VideoId in the test set, you must predict a list of labels and their corresponding confidence scores. The file should contain a header and have the following format:
+VideoId,LabelConfidencePairs
+000c,1 0.5 2 0.3 3 0.1 4 0.05 5 0.05
+etc..
